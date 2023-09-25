@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Order = require('../models/order');
-const { User } = require('../models/users');
+const { Order } = require('../models/order');
+const { User } = require('../models/user');
 
 // localhost:3000/api/v1/order
 
@@ -28,3 +28,5 @@ router.post(`/`, (req, res) => {
 		dateOrdered: res.body.dateOrdered,
 	});
 });
+
+module.exports = router;

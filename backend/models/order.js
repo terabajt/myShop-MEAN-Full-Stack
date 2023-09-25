@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
-const { OrderItem } = require('./orderItem');
-const { User } = require('./users');
 
 const orderSchema = mongoose.Schema({
-	orderItems: OrderItem,
+	orderItems: String,
 	shippingAddress1: String,
 	shippingAddress2: String,
 	city: String,
@@ -12,7 +10,7 @@ const orderSchema = mongoose.Schema({
 	phone: Number,
 	status: String,
 	totalPrice: Number,
-	user: User,
+	user: String,
 	dateOrdered: Date,
 });
 
